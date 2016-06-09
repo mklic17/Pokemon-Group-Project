@@ -3,33 +3,52 @@
   <head>
     <meta charset="utf-8">
     <title>Pokemon</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/foundation.min.css">
   </head>
   <body>
-    <h1>Pokemon fun things!!!</h1>
-
+    <div class="large-12 columns">
+      <h1>Pokemon fun things!!!</h1>
+    </div>
+    <section>
     <ul id="firstList">
       <!--select your pokemon from below -->
       <!--Needs a remove, delete button  -->
     </ul>
-
-<div>
-</div>
-
-    <ul id = "pokemonList">
-      <li class="template">
-        <span class="pokemon-name">
-          <a href="#" id="actualPokemon"></a>
-        </span>
-        <a href="#" id = "addButton">Add Pokemon</a>
-      </li>
-    </ul>
-      <!-- <li> -->
-        <!--lists with an add button, info button?  -->
-      <!-- </li> -->
-
-
+    <div class="row">
+      <div class="small-6 columns">
+          <ul id = "pokemonList">
+            <li class="template">
+              <span class="pokemon-name">
+                <a href="#" id="actualPokemon"></a>
+              </span>
+              <a href="#" id = "addButton">Add Pokemon</a>
+            </li>
+          </ul>
+      </div>
+      <div class="small-6 columns">
+        <article id="sidebar" class="events-press-cta panel sticky">
+          <ul id="nav nav-sidebar">
+            <li>
+              Testing
+            </li>
+            <li>
+              testing
+            </li>
+            <li>
+              Testing
+            </li>
+        <!-- <li> -->
+          <!--lists with an add button, info button?  -->
+        <!-- </li> -->
+          </ul>
+        </article>
+      </div>
+    </div>
+    </section>
     <script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src = "js/getPokemon.js"></script>
     <script src = "js/AddButton.js"></script>
+    <script src = "js/foundation.js"></script>
   </body>
 </html>
