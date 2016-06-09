@@ -4,27 +4,21 @@ var template = $('.template')
   .detach()
   .removeClass('template')
 
-function getEachPokemon(results){
-    debugger
-    $.each(results.results, function(i, pokemon) { //results is an array of pokemon on the API
-      addPokemon(pokemon);
+function getEachPokemon(pokemonList){
+    $.each(pokemonList.results, function(i, pokemon) {
+      addPokemon(pokemon, '#pokemonList');
     })
 }
 
-function addPokemon(pokemon) {
+function addPokemon(pokemon, list) {
     var li = template.clone();
     li.find('#actualPokemon')
       .text(pokemon.name)
       .attr('href', pokemon.url)
 
     li.attr('data-id', pokemon.id);
-    $('#pokemonList').append(li);
+    $(list).append(li);
   }
-
-// function addEachPokemonToList(pokemon){
-//   debugger
-//   $('#listPokemon').append('<li>' + pokemon.name+ '</li>');
-// }
 
 
 $.get({

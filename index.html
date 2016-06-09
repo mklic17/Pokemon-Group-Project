@@ -2,8 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel ="stylesheet" href = "css/foundation.min.css">
+    <link rel ="stylesheet" href = "css/custom-Changes.css">
     <title>Pokemon</title>
   </head>
+
   <body>
     <h1>Pokemon fun things!!!</h1>
 
@@ -12,17 +15,16 @@
       <!--Needs a remove, delete button  -->
     </ul>
 
-<div>
-</div>
-
+<div id="allWrapped">
     <ul id = "pokemonList">
       <li class="template">
         <span class="pokemon-name">
           <a href="#" id="actualPokemon"></a>
         </span>
-        <a href="#" id = "addButton">Add Pokemon</a>
+        <a href="#" id ="addButton" class = "button">Add Pokemon</a>
       </li>
     </ul>
+  </div>
       <!-- <li> -->
         <!--lists with an add button, info button?  -->
       <!-- </li> -->
@@ -31,5 +33,6 @@
     <script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src = "js/getPokemon.js"></script>
     <script src = "js/AddButton.js"></script>
+
   </body>
 </html>
