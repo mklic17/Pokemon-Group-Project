@@ -5,21 +5,24 @@ var template = $('.template')
   .removeClass('template')
 
 function getEachPokemon(pokemonList){
-    $.each(pokemonList.results, function(i, pokemon) {
-      addPokemon(pokemon, '#pokemonList');
+    var count = 1;
+    $.each(pokemonList.results, function(i, pokemon) { //
+      addPokemon(count, pokemon, '#pokemonList');
+      count++;
     })
 }
 
-function addPokemon(pokemon, list) {
-    var li = template.clone();
-    li.find('#actualPokemon')
-      .text(pokemon.name)
-      .attr('href', pokemon.url)
+function addPokemon(count, pokemon, list) {
+  var li = template.clone().removeClass('template');
 
-    li.attr('data-id', pokemon.id);
-    $(list).append(li);
+
+  if (count > 0){
+    li.attr('data-id', count);
+      li.find('#actualPokemon').text(pokemon.name).attr('href', pokemon.url);
   }
 
+    $(list).append(li);
+  }
 
 $.get({
     url: 'https://pokeapi.co/api/v2/pokemon/?limit=812&offset=0',

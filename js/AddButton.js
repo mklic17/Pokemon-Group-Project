@@ -2,12 +2,14 @@ $('#allWrapped').on('click', '#addButton', addButtonMethod);
 
 function addButtonMethod(ev){
   debugger;
-  ev.preventDefault;
+  ev.preventDefault();
+  var t = ev.currentTarget;
   var buttonFired = ev.currentTarget;
-  var pokemon = buttonFired.results;
-  console.log(pokemon);
+  var li = $(t).closest('li');
+  var id = li.attr('data-id');
 
+  //var if = li.attr('')
 
-  //addPokemon(pokemon, '#firstList'); // pokemon object
+  addPokemon(0, id, '#firstList'); // pokemon object
 
 }
