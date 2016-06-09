@@ -3,7 +3,7 @@ var url = 'https://pokeapi.co/api/v2/pokemon/?limit=812&offset=0';
 var template = $('.template')
   .detach()
   .removeClass('template')
-  
+
 function getEachPokemon(results){
     debugger
     $.each(results.results, function(i, pokemon) { //results is an array of pokemon on the API
@@ -13,7 +13,7 @@ function getEachPokemon(results){
 
 function addPokemon(pokemon) {
     var li = template.clone();
-    li.find('.pokemon-name a')
+    li.find('#actualPokemon')
       .text(pokemon.name)
       .attr('href', pokemon.url)
 
