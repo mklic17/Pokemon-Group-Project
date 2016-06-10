@@ -2,8 +2,9 @@
   position: relative;
   top: 0; }
 
-body {
-  background-color: black;
+section {
+  background-color:red;
+  margin-top: -5px;
 }
 
 h1 {
@@ -29,6 +30,13 @@ li {
   margin-left: auto;
   margin-right: auto;
 }*/
+
+#background {
+  background-color: white;
+  margin-left:12%;
+  margin-right: 12%;
+}
+
 #pokemonList {
   margin: 0px;
   width: 400px;
