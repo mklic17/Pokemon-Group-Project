@@ -1,31 +1,29 @@
 $('#pokemonList').on('click', '.addButton', addButtonMethod);
 
+
+
 function addButtonMethod(ev){
-  debugger
   var f = ev.currentTarget;
-
-  var poke = $(f).closest('#actualPokemon');
+  debugger;
+  var poke = $(f).closest('li');
   var id = poke.attr('data-id');
-  // var x = poke.clone().removeClass('template').attr("myParty");
-  // var id = poke.
-  //pokemonList.results[id].name;
 
-  console.log('Momma, we made it');
+  var newURL = 'https://pokeapi.co/api/v2/pokemon/' + id;
 
+  $.get({
+    url: newURL,
+    success: function(pokemonDetails){
+      debugger;
+        var name = pokemonDetails.forms[0].name;
+        addToMyParty(name);
+        // $.each(pokemonDetails.stats, function (i, stat){
+        //
+        // })
+      }
 
-  //var if = li.attr('')
+    })
+  }
 
-  addPokemon(0, id, '#firstList'); // pokemon object
-
+function addToMyParty(name){
+  $('#firstList').append(name);
 }
-
-
-// function addMutant(mutant) {
-//   var li = $('.template')
-//     .clone()
-//     .removeClass('template');
-//
-//   li.find('.mutant-name').text(mutant.mutant_name);
-//   li.attr('data-id', mutant.id);
-//   $('#mutantList').append(li);
-// }
