@@ -9,6 +9,7 @@ section {
 
 h1 {
   text-align: center;
+  border-bottom: 10px solid red;
 }
 
 h1 > a {
