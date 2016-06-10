@@ -39,6 +39,12 @@ li {
   float:right;
 }
 
+.statimage {
+  background-color: grey;
+  width: 330px;
+  margin-left: 450%;
+}
+
 #background {
   background-color: white;
   margin-left:12%;
