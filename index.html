@@ -8,10 +8,7 @@
   </head>
   <body>
     <section>
-    <ul id="firstList">
-      <!--select your pokemon from below -->
-      <!--Needs a remove, delete button  -->
-    </ul>
+
     <div class="large-12 columns">
       <h1>Choose Your Team!</h1>
       <iframe id="video" position: absolute; height=100%; border: none src="https://www.youtube.com/embed/_CvBNRxpRqU?start=361&autoplay=1" frameborder="0"  allowfullscreen></iframe>
@@ -21,7 +18,7 @@
           <ul id="pokemonList">
             <li class="template">
               <span class="pokemon-name">
-                <a href="#" id="actualPokemon"></a>
+                <a href="#" id="actualPokemon"></a> <!--Change to not a link -->
                 <a href="#" class="addButton" >Add Pokemon</a>
                 <img src="images/pkb.gif" id="pokeball-image" alt="pokeball">
               </span>
@@ -38,24 +35,17 @@
             <hr>
             </br>
             </li>
-            <li>
-               <img src="images/pkb.gif" alt="pokeball"> Pokemon1
-            </li>
-            <li>
-              <img src="images/pkb.gif" alt="pokeball"> Pokemon2
-            </li>
-            <li>
-              <img src="images/pkb.gif" alt="pokeball"> Pokemon3
-            </li>
-            <li>
-              <img src="images/pkb.gif" alt="pokeball"> Pokemon4
-            </li>
-            <li>
-              <img src="images/pkb.gif" alt="pokeball"> Pokemon5
-            </li>
-            <li>
-              <img src="images/pkb.gif" alt="pokeball"> Pokemon6
-            </li>
+          </ul>
+
+        <ul id = "firstList">
+          <li class = "templateParty">
+          <span class="pokemon-name-party">
+            <a href="#" id="actualPokemonParty"></a>
+            <!--<a href="#" class="addButton" >Add Pokemon</a>--> <!-- Change to a remove button -->
+               <!-- <img src="images/pkb.gif" alt="pokeball"> Pokemon1 -->
+           </span>
+          </li>
+
           </ul>
         </article>
       </div>
