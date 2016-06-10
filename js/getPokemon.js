@@ -1,8 +1,10 @@
-var url = 'https://pokeapi.co/api/v2/pokemon/?limit=812&offset=0';
+var url = 'https://pokeapi.co/api/v2/pokemon/?limit=811&offset=0';
 
 var template = $('.template')
   .detach()
   .removeClass('template')
+
+
 
 function getEachPokemon(pokemonList){
     var count = 1;
@@ -10,21 +12,20 @@ function getEachPokemon(pokemonList){
       addPokemon(count, pokemon, '#pokemonList');
       count++;
     })
+
+
 }
 
 function addPokemon(count, pokemon, list) {
-  var li = template.clone().removeClass('template');
-
-
-  if (count > 0){
-    li.attr('data-id', count);
-      li.find('#actualPokemon').text(pokemon.name).attr('href', pokemon.url);
-  }
-
+  var li = template.clone()
+  li.attr('data-id', count);
+  li.find('#actualPokemon').text(pokemon.name).attr('href', pokemon.url);
+    // $(list).append('<li class= "' + count + '"+ >' + pokemon.name + '</li>');
     $(list).append(li);
   }
 
+
 $.get({
-    url: 'https://pokeapi.co/api/v2/pokemon/?limit=812&offset=0',
+    url: url,
     success: getEachPokemon
 });
