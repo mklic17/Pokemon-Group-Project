@@ -2,7 +2,6 @@ $('#firstlist').on('click', '.deleteButton', removeButtonMethod);
 
 function removeButtonMethod(ev){
   ev.preventDefault();
-  debugger;
   console.log("Momma, We made it further");
   var things = ev.currentTarget;
   var li = $(things).closest('li');

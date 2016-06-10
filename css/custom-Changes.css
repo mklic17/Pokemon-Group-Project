@@ -9,6 +9,7 @@ section {
 
 h1 {
   text-align: center;
+  border-bottom: 10px solid red;
 }
 
 h1 > a {
@@ -61,6 +62,7 @@ li {
   background-color: white;
   padding: 25px;
   vertical-align: right;
+  
 }
 
 #firstList {
@@ -89,6 +91,6 @@ li {
 }
 #sidebar{
   padding-top: 100px;
-  
+
 }
 >>>>>>> cf401363986206f0f640becd87bf7f82c5297976
