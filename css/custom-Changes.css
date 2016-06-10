@@ -2,6 +2,7 @@
   position: relative;
   top: 0; }
 
+
 section {
   background-color:#f00000;
   height: 21000px;
@@ -10,6 +11,10 @@ section {
 h1 {
   text-align: center;
   border-bottom: 10px solid red;
+}
+
+#removeButton {
+  color: red;
 }
 
 h1 > a {
@@ -62,11 +67,6 @@ li {
 
 }
 
-#actualPokemon {
-  pointer-events: none;
-  color: black;
-}
-
 #firstList {
   border-style: solid;
   width: 250px;
@@ -83,10 +83,6 @@ li {
 
 #video {
   margin-left: 4%;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 77f6aa050d4aaf25e3286b24801b2521d9ba3e96
 }
 
 #sidebar {
