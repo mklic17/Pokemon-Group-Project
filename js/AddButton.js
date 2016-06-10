@@ -34,6 +34,8 @@ function addToMyParty(pokeomnObject){
     // var x = JSON.stringify(pokeomnObject);
     // localStorage.setItem(partyCount, x);
     partyCount++;
+    // var x = JSON.stringify(pokemon.results[i]);
+    // localStorage.setItem(count, x);
  }
  else {
     alert('Your party is full');
