@@ -84,3 +84,14 @@ li {
 #sidebar {
   padding-top: 100px;
 }
+
+#pikachuvideo {
+  margin-left: auto;
+  margin-right: auto;
+  align:middle;
+
+}
+
+.pickedPokemon {
+  color: black;
+}
