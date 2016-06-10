@@ -14,7 +14,6 @@ function addButtonMethod(ev){
   $.get({
     url: newURL,
     success: function(pokemonDetails){
-      debugger
       var name = pokemonDetails.forms[0].name;
       var pokemonobject = pokemonDetails.forms[0]
       // var url = pokemonDetails.forms[0].url;
@@ -32,8 +31,8 @@ function addToMyParty(pokeomnObject){
     var li = templateParty.clone()
     li.find('#actualPokemonParty').text(pokeomnObject.name);
     $('#firstList').append('<li>' + '<img src="images/pkb.gif" alt="pokeball"> ' + pokeomnObject.name + '   <a href="#" class="removeButton">remove</a> </li>');
-    var x = JSON.stringify(pokeomnObject);
-    localStorage.setItem(partyCount, x);
+    // var x = JSON.stringify(pokeomnObject);
+    // localStorage.setItem(partyCount, x);
     partyCount++;
  }
  else {
