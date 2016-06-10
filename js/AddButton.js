@@ -30,7 +30,7 @@ function addToMyParty(pokemonObject){
  if (partyCount < 6) {
     var li = templateParty.clone()
     li.find('#actualPokemonParty').text(pokemonObject.name);
-    $('#firstList').append('<li>' + '<img src="images/pkb.gif" alt="pokeball">' + '<a href="yougonnalearntoday.html">  ' + pokemonObject.name + '</a>' + '<a href="#" class="removeButton">remove</a> </li>');
+    $('#firstList').append('<li>' + '<img src="images/pkb.gif" alt="pokeball">' + '<a class="pickedPokemon" href="yougonnalearntoday.html">  ' + pokemonObject.name + '</a>' + '<a href="#" class="removeButton">remove</a> </li>');
     // var x = JSON.stringify(pokeomnObject);
     // localStorage.setItem(partyCount, x);
     partyCount++;
