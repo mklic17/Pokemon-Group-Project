@@ -27,7 +27,8 @@ li {
 }
 
 #results {
-  width: 400px;
-  margin-right: 5%;
-  padding-top: 25%;
+  margin:right;
+  outline-style: inset ;
+  width: 250px;
+
 }
