@@ -4,7 +4,6 @@
 
 section {
   background-color:#f00000;
-  margin-top: -15px;
 }
 
 h1 {
@@ -18,6 +17,10 @@ footer {
 
 li {
   list-style-type: none;
+}
+
+b {
+  text-align:center;
 }
 
 .addButton {

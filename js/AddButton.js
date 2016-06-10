@@ -27,5 +27,5 @@ function addButtonMethod(ev){
 function addToMyParty(name){
   var li = templateParty.clone()
   li.find('#actualPokemonParty').text(name);
-  $('#firstList').append(name);
+  $('#firstList').append('<li>' + '<img src="images/pkb.gif" alt="pokeball"> ' + name + '</li>');
 }
