@@ -3,8 +3,8 @@
   top: 0; }
 
 section {
-  background-color:red;
-  margin-top: -5px;
+  background-color:#f00000;
+  margin-top: -15px;
 }
 
 h1 {
@@ -37,6 +37,14 @@ li {
   margin-right: 12%;
 }
 
+#whitestripe {
+  size: 5000px;
+  background-color: white;
+  margin-top: 600px;
+  width: 1200px;
+
+}
+
 #pokemonList {
   margin: 0px;
   width: 400px;
@@ -56,5 +64,5 @@ li {
 }
 
 #video {
-  margin-left: 14%;
+  margin-left: 4%;
 }
