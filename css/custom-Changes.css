@@ -22,12 +22,19 @@ li {
   margin-right: auto;
 }*/
 #pokemonList {
-  width: 300px;
-  /*margin-left:5%;*/
+  margin: 0px;
+  width: 400px;
+  background-color: grey;
+  padding: 25px;
+  vertical-align: center;
 }
 
 #results {
   width: 400px;
   margin-right: 5%;
   padding-top: 25%;
+}
+
+#video {
+  vertical-align: center;
 }
