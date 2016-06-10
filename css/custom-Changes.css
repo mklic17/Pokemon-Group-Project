@@ -40,9 +40,18 @@ li {
 }
 
 .statimage {
-  background-color: grey;
+
   width: 330px;
   margin-left: 450%;
+}
+
+.picturePokemon {
+  width: 330px;
+
+}
+
+.hiddenImage {
+    visibility: hidden;
 }
 
 #background {

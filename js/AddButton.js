@@ -35,7 +35,7 @@ function addToMyParty(pokemonObject, pictureURL){
     // var x = JSON.stringify(pokeomnObject);
     // localStorage.setItem(partyCount, x);
     partyCount++;
-    var placement = $('.picturePokemon').removeClass('hide');
+    var placement = $('.picturePokemon').removeClass('hiddenImage');
 
     placement.attr('src', pictureURL);
     // var x = JSON.stringify(pokemon.results[i]);
