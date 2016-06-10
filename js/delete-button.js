@@ -1,4 +1,4 @@
-$('#firstlist').on('click', '.deleteButton', removeButtonMethod);
+$('.pokelist').on('click', '.removeButton', removeButtonMethod);
 
 function removeButtonMethod(ev){
   ev.preventDefault();
@@ -7,8 +7,8 @@ function removeButtonMethod(ev){
   var li = $(things).closest('li');
   var id = li.find('#actualPokemonParty').attr('data-id');
   li.remove();
-  count = count - 1;
-  JSON.parse(localStorage.removeItem(id));
+  partyCount = partyCount - 1;
+  // JSON.parse(localStorage.removeItem(id));
 
 }
 
