@@ -5,7 +5,6 @@ var templateParty = $('.templateParty')
   .removeClass('templateParty');
 
 function addButtonMethod(ev){
-  debugger;
   var f = ev.currentTarget;
   var poke = $(f).closest('li');
   var id = poke.attr('data-id');
@@ -14,7 +13,6 @@ function addButtonMethod(ev){
   $.get({
     url: newURL,
     success: function(pokemonDetails){
-      console.log("Momma, We Made It");
       var name = pokemonDetails.forms[0].name;
       // var url = pokemonDetails.forms[0].url;
       var stats = pokemonDetails.stats;
@@ -27,21 +25,21 @@ function addButtonMethod(ev){
 }
 
 function addToMyParty(name){
-  // if (count < 6) {
+  console.log(count);
+ if (count < 6) {
     var li = templateParty.clone()
     li.find('#actualPokemonParty').text(name);
-    $('#firstList').append('<li>' + '<img src="images/pkb.gif" alt="pokeball"> ' + name + '   <a href="#" class="remove Button">remove</a> </li>');
-      // count += count + 1;
-  // }
-  // else {
+    $('#firstList').append('<li>' + '<img src="images/pkb.gif" alt="pokeball"> ' + name + '   <a href="#" class="removeButton">remove</a> </li>');
+    count++;
+ }
+ else {
   //   // Some kind of feedback
-  // }
+ }
 }
 
 
 // I have not tested this out, you will need to decide what you are appending from the stats
 function nextPage(name, pictureURL, statsObj){
-  debugger;
   var pokemonNameStatForm = $('h1.pokemonStatName');
   pokemonNameStatForm.text = name;
 

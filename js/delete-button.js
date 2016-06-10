@@ -1,7 +1,8 @@
-$('#pokemonList').on('click', '.deleteButton', removeButtonMethod);
+$('#pokelist').on('click', '.deleteButton', removeButtonMethod);
 
 function removeButtonMethod(ev){
   ev.preventDefault();
+  console.log("Momma, We made it further");
   var things = ev.currentTarget;
   var pokemon = $(things).closest('li');
   pokemon.remove();
