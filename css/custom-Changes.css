@@ -2,6 +2,7 @@
   position: relative;
   top: 0; }
 
+
 section {
   background-color:#f00000;
   height: 21000px;
@@ -74,11 +75,7 @@ li {
   background-color: white;
   padding: 25px;
   vertical-align: right;
-}
 
-#actualPokemon {
-  pointer-events: none;
-  color: black;
 }
 
 #firstList {
