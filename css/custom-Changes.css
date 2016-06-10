@@ -88,3 +88,12 @@ li {
 #sidebar {
   padding-top: 100px;
 }
+
+#pikavid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pickedPokemon {
+  color: black;
+}
