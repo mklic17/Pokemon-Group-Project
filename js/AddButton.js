@@ -1,5 +1,6 @@
 $('#pokemonList').on('click', '.addButton', addButtonMethod);
-var count = 0;
+var partyCount = 0;
+
 var templateParty = $('.templateParty')
   .detach()
   .removeClass('templateParty');
@@ -13,7 +14,6 @@ function addButtonMethod(ev){
   $.get({
     url: newURL,
     success: function(pokemonDetails){
-      console.log("Momma, We Made It");
       var name = pokemonDetails.forms[0].name;
       // var url = pokemonDetails.forms[0].url;
       var stats = pokemonDetails.stats;
@@ -26,15 +26,15 @@ function addButtonMethod(ev){
 }
 
 function addToMyParty(name){
-  // if (count < 6) {
+ if (partyCount < 6) {
     var li = templateParty.clone()
     li.find('#actualPokemonParty').text(name);
-    $('#firstList').append('<li>' + '<img src="images/pkb.gif" alt="pokeball"> ' + name + '   <a href="#" class="remove Button">remove</a> </li>');
-      // count += count + 1;
-  // }
-  // else {
-  //   // Some kind of feedback
-  // }
+    $('#firstList').append('<li>' + '<img src="images/pkb.gif" alt="pokeball"> ' + name + '   <a href="#" class="removeButton">remove</a> </li>');
+    partyCount++;
+ }
+ else {
+    alert('Your party is full');
+ }
 }
 
 

@@ -1,11 +1,15 @@
-$('#pokemonList').on('click', '.deleteButton', removeButtonMethod);
+$('#pokelist').on('click', '.deleteButton', removeButtonMethod);
 
 function removeButtonMethod(ev){
   ev.preventDefault();
+  debugger;
+  console.log("Momma, We made it further");
   var things = ev.currentTarget;
-  var pokemon = $(things).closest('li');
-  pokemon.remove();
+  var li = $(things).closest('li');
+  var id = li.find('#actualPokemonParty').attr('data-id');
+  li.remove();
   count = count - 1;
+  
 }
 
 // Currently not working, but I never tested it out yet
