@@ -54,8 +54,12 @@ b {
   border-style: solid;
   width: 250px;
   margin-top: 125px;
-  margin-left: 300%;
+  margin-left: 800%;
   padding: 25px;
+}
+
+#link {
+  margin-top:15%;
 }
 
 #video {
