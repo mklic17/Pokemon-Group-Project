@@ -4,10 +4,15 @@
 
 section {
   background-color:#f00000;
+  height: 21000px;
 }
 
 h1 {
   text-align: center;
+}
+
+h1 > a {
+  color: black;
 }
 
 footer {
@@ -17,10 +22,6 @@ footer {
 
 li {
   list-style-type: none;
-}
-
-b {
-  text-align:center;
 }
 
 .addButton {
@@ -47,6 +48,13 @@ b {
   height:1000px;
 }
 
+#background-1 {
+  background-color: white;
+  margin-left:12%;
+  margin-right: 12%;
+  height:21000px;
+}
+
 #pokemonList {
   margin: 0px;
   width: 400px;
@@ -62,6 +70,7 @@ b {
   margin-bottom: auto;
   margin-left: 800%;
   padding: 25px;
+  background-color:rgb(250,250,250);
 }
 
 #link {
@@ -70,8 +79,16 @@ b {
 
 #video {
   margin-left: 4%;
+<<<<<<< HEAD
+}
+
+#sidebar {
+  padding-top: 100px;
+}
+=======
 }
 #sidebar{
   padding-top: 100px;
   
 }
+>>>>>>> cf401363986206f0f640becd87bf7f82c5297976
