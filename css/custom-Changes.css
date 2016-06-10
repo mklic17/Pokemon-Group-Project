@@ -11,7 +11,7 @@ li {
   list-style-type: none;
 }
 
-#addButton {
+.addButton {
   float:right;
 }
 
@@ -24,7 +24,7 @@ li {
 #pokemonList {
   margin: 0px;
   width: 400px;
-  background-color: grey;
+  background-color: white;
   padding: 25px;
   vertical-align: center;
 }
