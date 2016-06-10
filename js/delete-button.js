@@ -2,10 +2,10 @@ $('.pokelist').on('click', '.removeButton', removeButtonMethod);
 
 function removeButtonMethod(ev){
   ev.preventDefault();
-<<<<<<< HEAD
+
   console.log("Momma, We made it further");
-=======
-  debugger;
+
+  //debugger;
   console.log("Don't Beat Me Pappa");
   var things = ev.currentTarget;
   var li = $(things).closest('li');
