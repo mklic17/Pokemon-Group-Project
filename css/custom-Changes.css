@@ -9,10 +9,25 @@ footer {
 
 li {
   list-style-type: none;
-  width: 250px;
-  background-color: #e6e6e6;
 }
 
 #addButton {
   float:right;
+}
+
+/*#left-side {
+  width: 250px;
+  background-color: #grey;
+  margin-left: auto;
+  margin-right: auto;
+}*/
+#pokemonList {
+  width: 300px;
+  /*margin-left:5%;*/
+}
+
+#results {
+  width: 400px;
+  margin-right: 5%;
+  padding-top: 25%;
 }
