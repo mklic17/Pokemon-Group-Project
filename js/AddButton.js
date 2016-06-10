@@ -18,7 +18,6 @@ function addButtonMethod(ev){
       var pokemonobject = pokemonDetails.forms[0]
       // var url = pokemonDetails.forms[0].url;
       var stats = pokemonDetails.stats;
-      debugger;
       var pictureURL = pokemonDetails.sprites.front_default;
       nextPage(name, pictureURL, stats);
       addToMyParty(pokemonobject, pictureURL);
@@ -28,11 +27,10 @@ function addButtonMethod(ev){
 }
 
 function addToMyParty(pokemonObject, pictureURL){
-  debugger;
  if (partyCount < 6) {
     var li = templateParty.clone()
     li.find('#actualPokemonParty').text(pokemonObject.name);
-    $('#firstList').append('<li>' + '<img src="images/pkb.gif" alt="pokeball">' + '<a class="pickedPokemon" href="#">  ' + pokemonObject.name + '</a>' + '<a href="#" class="removeButton">remove</a> </li>');
+    $('#firstList').append('<li>' + '<img src="images/pkb.gif" alt="pokeball"> ' + pokemonObject.name + '</a>' + '<a href="#" class="removeButton">remove</a> </li>');
     // $('#firstList').append('<li>' + '<img src="images/pkb.gif" alt="pokeball">' + '<a class="pickedPokemon" href="yougonnalearntoday.html">  ' + pokemonObject.name + '</a>' + '<a href="#" class="removeButton">remove</a> </li>');
     // var x = JSON.stringify(pokeomnObject);
     // localStorage.setItem(partyCount, x);
