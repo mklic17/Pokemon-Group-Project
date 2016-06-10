@@ -62,6 +62,11 @@ li {
 
 }
 
+#actualPokemon {
+  pointer-events: none;
+  color: black;
+}
+
 #firstList {
   border-style: solid;
   width: 250px;
