@@ -27,6 +27,12 @@ b {
   float:right;
 }
 
+.pokemonStatName {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
 /*#left-side {
   width: 250px;
   background-color: #grey;
@@ -38,6 +44,7 @@ b {
   background-color: white;
   margin-left:12%;
   margin-right: 12%;
+  height:1000px;
 }
 
 #pokemonList {
@@ -49,13 +56,16 @@ b {
 }
 
 #firstList {
-  border-width: 2px;
-  border-color: black;
   border-style: solid;
   width: 250px;
-  margin-top: 125px;
-  margin-left: 300%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 800%;
   padding: 25px;
+}
+
+#link {
+  margin-top:15%;
 }
 
 #video {
