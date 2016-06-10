@@ -13,10 +13,6 @@ h1 {
   border-bottom: 10px solid red;
 }
 
-#removeButton {
-  color: red;
-}
-
 h1 > a {
   color: black;
 }
@@ -87,13 +83,4 @@ li {
 
 #sidebar {
   padding-top: 100px;
-}
-
-#pikavid {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.pickedPokemon {
-  color: black;
 }
