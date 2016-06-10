@@ -30,7 +30,7 @@ function addToMyParty(name){
   // if (count < 6) {
     var li = templateParty.clone()
     li.find('#actualPokemonParty').text(name);
-    $('#firstList').append('<li>' + '<img src="images/pkb.gif" alt="pokeball"> ' + name + '</li>');
+    $('#firstList').append('<li>' + '<img src="images/pkb.gif" alt="pokeball"> ' + name + '   <a href="#" class="remove Button">remove</a> </li>');
       // count += count + 1;
   // }
   // else {
