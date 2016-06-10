@@ -15,21 +15,24 @@ function addButtonMethod(ev){
     url: newURL,
     success: function(pokemonDetails){
       var name = pokemonDetails.forms[0].name;
+      var pokemonobject = pokemonDetails.forms[0]
       // var url = pokemonDetails.forms[0].url;
       var stats = pokemonDetails.stats;
       var pictureURL = pokemonDetails.sprites.front_default;
       nextPage(name, pictureURL, stats);
-      addToMyParty(name);
+      addToMyParty(pokemonobject);
 
       }
   })
 }
 
-function addToMyParty(name){
+function addToMyParty(pokeomnObject){
  if (partyCount < 6) {
     var li = templateParty.clone()
-    li.find('#actualPokemonParty').text(name);
-    $('#firstList').append('<li>' + '<img src="images/pkb.gif" alt="pokeball"> ' + name + '   <a href="#" class="removeButton">remove</a> </li>');
+    li.find('#actualPokemonParty').text(pokeomnObject.name);
+    $('#firstList').append('<li>' + '<img src="images/pkb.gif" alt="pokeball"> ' + pokeomnObject.name + '   <a href="#" class="removeButton">remove</a> </li>');
+    // var x = JSON.stringify(pokeomnObject);
+    // localStorage.setItem(partyCount, x);
     partyCount++;
     // var x = JSON.stringify(pokemon.results[i]);
     // localStorage.setItem(count, x);
