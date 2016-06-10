@@ -7,3 +7,5 @@ function removeButtonMethod(ev){
   pokemon.remove();
   count = count - 1;
 }
+
+// Currently not working, but I never tested it out yet
