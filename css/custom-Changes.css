@@ -2,6 +2,14 @@
   position: relative;
   top: 0; }
 
+body {
+  background-color: black;
+}
+
+h1 {
+  text-align: center;
+}
+
 footer {
   height: 6rem;
   background: #333;
@@ -26,12 +34,19 @@ li {
   width: 400px;
   background-color: white;
   padding: 25px;
-  vertical-align: center;
+  vertical-align: right;
 }
 
 #results {
-  margin:right;
-  outline-style: inset ;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
   width: 250px;
+  margin-top: 125px;
+  margin-left: 300%;
+  padding: 25px;
+}
 
+#video {
+  margin-left: 14%;
 }
