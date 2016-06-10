@@ -18,22 +18,28 @@ function addButtonMethod(ev){
       var pokemonobject = pokemonDetails.forms[0]
       // var url = pokemonDetails.forms[0].url;
       var stats = pokemonDetails.stats;
+      debugger;
       var pictureURL = pokemonDetails.sprites.front_default;
       nextPage(name, pictureURL, stats);
-      addToMyParty(pokemonobject);
+      addToMyParty(pokemonobject, pictureURL);
 
       }
   })
 }
 
-function addToMyParty(pokemonObject){
+function addToMyParty(pokemonObject, pictureURL){
+  debugger;
  if (partyCount < 6) {
     var li = templateParty.clone()
     li.find('#actualPokemonParty').text(pokemonObject.name);
-    $('#firstList').append('<li>' + '<img src="images/pkb.gif" alt="pokeball">' + '<a class="pickedPokemon" href="yougonnalearntoday.html">  ' + pokemonObject.name + '</a>' + '<a href="#" class="removeButton">remove</a> </li>');
+    $('#firstList').append('<li>' + '<img src="images/pkb.gif" alt="pokeball">' + '<a class="pickedPokemon" href="#">  ' + pokemonObject.name + '</a>' + '<a href="#" class="removeButton">remove</a> </li>');
+    // $('#firstList').append('<li>' + '<img src="images/pkb.gif" alt="pokeball">' + '<a class="pickedPokemon" href="yougonnalearntoday.html">  ' + pokemonObject.name + '</a>' + '<a href="#" class="removeButton">remove</a> </li>');
     // var x = JSON.stringify(pokeomnObject);
     // localStorage.setItem(partyCount, x);
     partyCount++;
+    var placement = $('.picturePokemon').removeClass('hide');
+
+    placement.attr('src', pictureURL);
     // var x = JSON.stringify(pokemon.results[i]);
     // localStorage.setItem(count, x);
  }
@@ -45,7 +51,6 @@ function addToMyParty(pokemonObject){
 
 // I have not tested this out, you will need to decide what you are appending from the stats
 function nextPage(name, pictureURL, statsObj){
-  debugger;
   var pokemonNameStatForm = $('h1.pokemonStatName').text(name);
   pokemonNameStatForm.text = name;
 
@@ -60,4 +65,12 @@ function nextPage(name, pictureURL, statsObj){
   // }
 }
 
-$('#actualPokemonParty').on('click', '')
+// $('#actualPokemonParty').on('click', '.pickedPokemon', putI);
+//
+// function launchNewPage (ev) {
+//   debugger;
+//   var ya = ev.currentTarget;
+//   var currLi = $(ya).closest('li');
+
+  // var pokemonURL =
+// }
