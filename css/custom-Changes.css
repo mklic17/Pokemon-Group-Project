@@ -40,6 +40,12 @@ li {
   float:right;
 }
 
+.statimage {
+  background-color: grey;
+  width: 330px;
+  margin-left: 450%;
+}
+
 #background {
   background-color: white;
   margin-left:12%;
@@ -65,11 +71,13 @@ li {
 
 #firstList {
   border-style: solid;
-  width: 250px;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 800%;
-  padding: 25px;
+  width: 330px;
+
+  margin-left: 450%;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   background-color:rgb(250,250,250);
 }
 
@@ -88,7 +96,7 @@ li {
 #pikachuvideo {
   margin-left: auto;
   margin-right: auto;
-  align:middle;
+  width: 800px;
 
 }
 
