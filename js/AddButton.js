@@ -45,7 +45,8 @@ function addToMyParty(pokemonObject){
 
 // I have not tested this out, you will need to decide what you are appending from the stats
 function nextPage(name, pictureURL, statsObj){
-  var pokemonNameStatForm = $('h1.pokemonStatName');
+  debugger;
+  var pokemonNameStatForm = $('h1.pokemonStatName').text(name);
   pokemonNameStatForm.text = name;
 
   var imageURL = ('img.pokemonStatName');
@@ -58,3 +59,5 @@ function nextPage(name, pictureURL, statsObj){
   //   $('#statsList"').append('<li>' +  + '</li>') // can't do because
   // }
 }
+
+$('#actualPokemonParty').on('click', '')
