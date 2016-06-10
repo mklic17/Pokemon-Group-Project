@@ -34,12 +34,9 @@ li {
   width: 40%;
 }
 
-/*#left-side {
-  width: 250px;
-  background-color: #grey;
-  margin-left: auto;
-  margin-right: auto;
-}*/
+.removeButton {
+  float:right;
+}
 
 #background {
   background-color: white;
@@ -79,16 +76,13 @@ li {
 
 #video {
   margin-left: 4%;
-<<<<<<< HEAD
 }
 
 #sidebar {
   padding-top: 100px;
 }
-=======
+
 }
 #sidebar{
   padding-top: 100px;
-  
 }
->>>>>>> cf401363986206f0f640becd87bf7f82c5297976

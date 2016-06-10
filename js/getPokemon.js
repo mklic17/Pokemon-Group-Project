@@ -8,8 +8,6 @@ function getEachPokemon(pokemonList){
     var count = 1;
     $.each(pokemonList.results, function(i, pokemon) { //
       addPokemon(count, pokemon);
-      var x = JSON.stringify(pokemon.results[i]);
-      localStorage.setItem(count, x);
       count++;
     })
 }

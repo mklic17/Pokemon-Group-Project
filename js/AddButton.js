@@ -31,6 +31,8 @@ function addToMyParty(name){
     li.find('#actualPokemonParty').text(name);
     $('#firstList').append('<li>' + '<img src="images/pkb.gif" alt="pokeball"> ' + name + '   <a href="#" class="removeButton">remove</a> </li>');
     partyCount++;
+    // var x = JSON.stringify(pokemon.results[i]);
+    // localStorage.setItem(count, x);
  }
  else {
     alert('Your party is full');
