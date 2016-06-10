@@ -5,7 +5,6 @@ var templateParty = $('.templateParty')
   .removeClass('templateParty');
 
 function addButtonMethod(ev){
-  debugger;
   var f = ev.currentTarget;
   var poke = $(f).closest('li');
   var id = poke.attr('data-id');
@@ -41,7 +40,6 @@ function addToMyParty(name){
 
 // I have not tested this out, you will need to decide what you are appending from the stats
 function nextPage(name, pictureURL, statsObj){
-  debugger;
   var pokemonNameStatForm = $('h1.pokemonStatName');
   pokemonNameStatForm.text = name;
 
