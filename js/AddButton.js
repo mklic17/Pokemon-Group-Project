@@ -19,6 +19,7 @@ function addButtonMethod(ev){
         var name = pokemonDetails.forms[0].name;
         // var url = pokemonDetails.forms[0].url;
         var stats = pokemonDetails.stats;
+        var picture = pokemonDetails.sprites.front_default;
         addToMyParty(name);
       }
     })
