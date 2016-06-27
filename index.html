@@ -3,56 +3,53 @@
   <head>
     <meta charset="utf-8">
     <title>Pokemon</title>
-    <link rel="stylesheet" href="css/custom-Changes.css">
-    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="content/foundation.min.css">
+    <link rel="stylesheet" href="content/content.css">
   </head>
   <body>
-    <section>
 
-      <div id="background-1">
-        <div class="large-12 columns">
-          <h1><img src="images/pokedex.png" id="pokedex-image" alt="pokedex"> Choose Your Team<a href="pikachu.html">!</a></h1>
-          <iframe id="video" position: absolute; height=100%; border: none src="https://www.youtube.com/embed/_CvBNRxpRqU?start=361&autoplay=1" frameborder="0"  allowfullscreen></iframe>
-        </div>
-        <div class="row">
-          <div class="medium-4 columns">
-              <ul id="pokemonList">
-                <li class="template">
-                  <span class="pokemon-name">
-                    <img src="images/pkb.gif" id="pokeball-image" alt="pokeball">
-                    <a href="#" id="actualPokemon"></a>
-                    <a href="#" class="addButton">Add Pokemon</a>
-                  </span>
-                </li>
-              </ul>
-          </div>
-          <article id="sidebar" class="events-press-cta panel sticky">
-            <div class="medium-4 columns">
-              <ul id="firstList" class="pokelist">
-                <li>
-                  <b><img src="images/pkb.gif" alt="pokeball"> PKMN Party <img src="images/pkb.gif" alt="pokeball"></b>
-                </li>
-                <!-- <li> -->
-                <hr>
-                <!-- </li> -->
-              </ul>
-              <div class="statimage" >
-                <img src = "#" class="picturePokemon hiddenImage">
+    <!-- Contains the whole left side of the screen -->
+    <div class="row" id="back">
 
-              </div>
-            </div>
-          </article>
-          <div id="link" class="medium-4 columns">
-          </div>
-        </div>
+    <!-- The scrollable bar with the list of 151 pokemon -->
+       <div class="small-2 medium-3 columns">
+         <h5 id="title">List of Pokemon</h5>
+          <ul id="pokemonList">
+            <li class="template">
+                <a id="actualPokemon" class="addButton"></a>
+            </li>
+          </ul>
       </div>
-    </section>
-    <hr id="whitestripe">
-    <script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src = "js/getPokemon.js"></script>
-    <script src = "js/AddButton.js"></script>
-    <script src = "js/delete-button.js"></script>
-    <script src = "js/foundation.js"></script>
-    <script src = "js/what-input.js"></script>
+
+      <!-- The entire div on the right side of the screen -->
+      <div class="small-10 medium-9 columns" id="farSide">
+
+        <!-- The top div that contains the picture and the description -->
+        <div id="pictureStats">
+          <img class="picture1">
+          <div id="descHelp">
+            <p id="description">Where is this</p>
+        </div>
+        </div>
+
+        <!-- The bottom div that contains the list of pokemon in your party -->
+        <div id="party">
+          <h4>Party</h4>
+          <ul id="newList">
+              <li class="imOverHere yaa">
+                <a id="pokeParty"></a>
+                <a class="removeButton">Remove</a>
+              </li>
+            </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.js"></script>
+    <script src="app/test.js"></script>
+
   </body>
 </html>
