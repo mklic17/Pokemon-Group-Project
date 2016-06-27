@@ -22,9 +22,14 @@
 .picture1 {
   display: block;
   margin: auto;
-  height: 400px;
-  width: 200px;
+  height: 384px;
+  width: 384px;
   padding: 70px 0px 60px 0px;;
+}
+
+#party {
+  margin-top: 5em;
+
 }
 
 #pokeParty {
