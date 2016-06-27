@@ -48,6 +48,7 @@ var Pokemon = {
 
 					Pokemon.addPicture(pokeEverything.sprites);
 					Pokemon.createDescription(pokeEverything);
+					localStorage.setItem(Pokemon.count, JSON.stringify(pokeEverything));
 				}
 			});
 		}
