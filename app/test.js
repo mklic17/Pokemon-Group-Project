@@ -10,7 +10,7 @@ var Pokemon = {
    			success: this.getEachPokemon
 		});
 		this.setupEventListeners();
-		// this.count = localStorage.length;
+		this.count = localStorage.length;
 	},
 
 
@@ -38,24 +38,30 @@ var Pokemon = {
 		var id = li.attr('data-id');
  		var newURL = 'https://pokeapi.co/api/v2/pokemon/' + id;
 
-		$.get({
-			url: newURL,
-			success: function(pokeEverything) {
-				var li = imOverHere.removeClass('hide').clone();
-				li.find("#pokeParty").text(pokeEverything.name);
-				$('#newList').append(li);
+		if(Pokemon.count < 6){ // count is initially 0
+			$.get({
+				url: newURL,
+				success: function(pokeEverything) {
+					var li = imOverHere.removeClass('hide').clone();
+					li.find("#pokeParty").text(pokeEverything.name);
+					$('#newList').append(li);
 
-				Pokemon.addPicture(pokeEverything.sprites);
-				Pokemon.createDescription(pokeEverything);
-			}
-
-		});
+					Pokemon.addPicture(pokeEverything.sprites);
+					Pokemon.createDescription(pokeEverything);
+				}
+			});
+		}
+		else {
+			console.log("You have to many Pokemon in your current party,");
+		}
+		Pokemon.count++;
 	},
 
 	removeButton: function(ev) {
 		var li = $(this).closest('li');
 		var id = li.find('#newList').attr('data-id');
 		li.remove();
+		Pokemon.count--;
 	},
 
 	addPicture: function(pokePictures){
@@ -67,7 +73,7 @@ var Pokemon = {
 		var types = pokeEverything.types;
 		var type='';
 		var check = 'type';
-		for (var i = 0; i <types.length; i++) {
+		for (var i = 0; i < types.length; i++) {
 			if (i > 0) {
 				type += ' and ';
 				check = "types"
