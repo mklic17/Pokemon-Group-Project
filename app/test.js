@@ -11,6 +11,16 @@ var Pokemon = {
 		});
 		this.setupEventListeners();
 		this.count = localStorage.length;
+		console.log(this.count);
+		debugger
+		if(this.count != 0){
+			for(var i = 1; i >= this.count; i++) {
+				var item = localStorage.getItem(JSON.parse(i));
+				Pokemon.appendPokemon(item.name);
+				console.log(item.name);
+				// appendPokemon()
+			}
+		}
 	},
 
 
@@ -42,12 +52,10 @@ var Pokemon = {
 			$.get({
 				url: newURL,
 				success: function(pokeEverything) {
-					var li = imOverHere.removeClass('hide').clone();
-					li.find("#pokeParty").text(pokeEverything.name);
-					$('#newList').append(li);
-
+					Pokemon.appendPokemon(pokeEverything.name);
 					Pokemon.addPicture(pokeEverything.sprites);
 					Pokemon.createDescription(pokeEverything);
+					console.log(Pokemon.count);
 					localStorage.setItem(Pokemon.count, JSON.stringify(pokeEverything));
 				}
 			});
@@ -56,6 +64,13 @@ var Pokemon = {
 			console.log("You have to many Pokemon in your current party,");
 		}
 		Pokemon.count++;
+	},
+
+	appendPokemon(name){
+		console.log(name);
+		var li = imOverHere.removeClass('hide').clone();
+		li.find("#pokeParty").text(name);
+		$('#newList').append(li);
 	},
 
 	removeButton: function(ev) {
@@ -97,6 +112,16 @@ var Pokemon = {
 		});
 	},
 
+	// createObj: function(pokemon){
+	// 	var obj = {
+	// 		name: pokemon.name,
+	// 		pictureUrl: pokemon.spritesfront_default,
+	// 		id: pokemon.id,
+	// 		type: pokemon.types,
+	// 	}
+	// 	return obj;
+	// },
+
 }
 
-Pokemon.init()
+Pokemon.init();
